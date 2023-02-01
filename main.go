@@ -24,6 +24,8 @@ func currentBlock() {
     fmt.Println(block.Number())
 }
 
+
+// createWallet creates user wallet address
 func createWallet() (string, string) {
     getPrivateKey, err := crypto.GenerateKey()
 
