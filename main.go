@@ -73,6 +73,7 @@ func main() {
         log.Fatal("Public Key Error")
     }
 
+    // Create sender address
     SenderAddress := crypto.PubkeyToAddress(*publicKeyECDSA)
 
     nonce, err := client.PendingNonceAt(ctx, SenderAddress)
