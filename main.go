@@ -96,6 +96,7 @@ func main() {
         log.Println(err)
     }
 
+    // Transaction details
     transaction := types.NewTransaction(nonce, RecipientAddress, amount, uint64(gasLimit), gas, nil)
     signedTx, err := types.SignTx(transaction, types.NewEIP155Signer(ChainID), privateKey)
     if err != nil {
